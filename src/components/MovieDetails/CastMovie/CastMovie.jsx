@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import * as API from '../../services/fetchMoviesApi';
-import styles from './CastMovie.module.scss';
+import * as API from '../../../API/Api';
+import { Img, Item, ImgNotFound } from './CastMovie.styled';
 
 const CastMovie = () => {
   const [castMovie, setCastMovie] = useState(null);
@@ -24,16 +24,15 @@ const CastMovie = () => {
           {castMovie
             .slice(0, 19)
             .map(({ id, name, character, profile_path }) => (
-              <li key={id} className={styles.item}>
+              <Item key={id}>
                 {profile_path ? (
-                  <img
+                  <Img
                     src={`https://image.tmdb.org/t/p/w500${profile_path}`}
                     alt={name}
-                    className={styles.img}
                     width="100"
                   />
                 ) : (
-                  <div className={styles.imgNotFound}>Image not found</div>
+                  <ImgNotFound >Image not found</ImgNotFound>
                 )}
                 <div>
                   <p>
@@ -43,7 +42,7 @@ const CastMovie = () => {
                     Character: <b>{character}</b>
                   </p>
                 </div>
-              </li>
+              </Item>
             ))}
         </ul>
       ) : (

@@ -1,9 +1,12 @@
-.container {
-    margin-bottom: 10px;
-}
+import styled from '@emotion/styled';
 
-.link {
-    display: inline-flex;
+export const Container = styled.div`
+ margin-bottom: 10px;
+`;
+
+
+export const Link = styled.link`
+   display: inline-flex;
     align-items: center;
     padding: 3px 10px;
     background-color: #dddddd;
@@ -18,4 +21,5 @@
         color: #dddddd;
         background-color: #212121;
     }
-}
+`;
+

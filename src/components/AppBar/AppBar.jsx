@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import styles from './AppBar.module.scss';
+import { Header, Active, Link} from './AppBar.styled';
 
 const navItems = [
   { href: '/', text: 'Home' },
@@ -8,21 +8,21 @@ const navItems = [
 
 const AppBar = () => {
   return (
-    <header className={styles.header}>
+    <Header>
       <nav>
         {navItems.map(({ href, text }) => (
           <NavLink
             key={href}
             to={href}
             className={({ isActive }) =>
-              isActive ? `${styles.active}` : `${styles.link}`
+              isActive ? `${Active}` : `${Link}`
             }
           >
             {text}
           </NavLink>
         ))}
       </nav>
-    </header>
+    </Header>
   );
 };
 

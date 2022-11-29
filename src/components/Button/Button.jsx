@@ -1,15 +1,15 @@
 import { Link } from 'react-router-dom';
 import { BsArrowLeftShort } from 'react-icons/bs';
-import styles from './Button.module.scss';
+import { Container,  Link } from './Button.styled';
 
 const GoBackButton = ({ backLinkHref }) => {
   return (
-    <div className={styles.container}>
-      <Link to={backLinkHref} className={styles.link}>
+    <Container>
+      <Link to={backLinkHref}>
         <BsArrowLeftShort size={20} />
         Go back
       </Link>
-    </div>
+    </Container>
   );
 };
 

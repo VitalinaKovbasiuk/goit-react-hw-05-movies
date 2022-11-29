@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import styles from './InfoMovie.module.scss';
+import { CardFilm } from './InfoMovie.styled';
 
 const InfoMovie = ({ movie }) => {
   const {
@@ -24,19 +24,19 @@ const InfoMovie = ({ movie }) => {
 
   return (
     <>
-      <div className={styles.cardFilm}>
+      <CardFilm>
         <img
           src={imgUrl}
           alt={title || name}
           width="200"
-          className={styles.img}
+          // className={styles.img}
         />
         <div>
-          <h2 className={styles.title}>
+          <h2>
             {title || name} ({(first_air_date || release_date).slice(0, 4)})
           </h2>
 
-          <p className={styles.score}>User Score: {userScore}%</p>
+          <p>User Score: {userScore}%</p>
 
           <h3>Overview</h3>
           <p>{overview}</p>
@@ -44,7 +44,7 @@ const InfoMovie = ({ movie }) => {
           <h3>Genres</h3>
           <p>{genres.map(({ name }) => name).join(', ')}</p>
         </div>
-      </div>
+      </CardFilm>
       <hr />
     </>
   );
