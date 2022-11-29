@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { Item, Title, Link } from './Addititonal.styled';
+import { Item, Title} from './Addititonal.styled';
 
 const AdditionalItems = [
   { href: 'cast', text: 'Cast' },
@@ -10,7 +10,7 @@ const AdditionalItems = [
 const Additional = ({ location }) => {
   return (
     <div>
-      <Title className={styles.title}>Addititonal information</Title>
+      <Title>Addititonal information</Title>
       <ul>
         {AdditionalItems.map(({ href, text }) => (
           <Item key={href}>

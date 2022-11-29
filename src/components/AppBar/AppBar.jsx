@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { Header, Active, Link} from './AppBar.styled';
+import { Header} from './AppBar.styled';
 
 const navItems = [
   { href: '/', text: 'Home' },
@@ -14,9 +14,9 @@ const AppBar = () => {
           <NavLink
             key={href}
             to={href}
-            className={({ isActive }) =>
-              isActive ? `${Active}` : `${Link}`
-            }
+            // className={({ isActive }) =>
+            //   isActive ? `${Active}` : `${Link}`
+            // }
           >
             {text}
           </NavLink>

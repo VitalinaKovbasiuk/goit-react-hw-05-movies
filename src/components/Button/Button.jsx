@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { BsArrowLeftShort } from 'react-icons/bs';
-import { Container,  Link } from './Button.styled';
+import { Container } from './Button.styled';
 
 const GoBackButton = ({ backLinkHref }) => {
   return (

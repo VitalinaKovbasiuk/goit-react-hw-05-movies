@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import * as API from '../../../API/Api';
+import * as API from '../../API/Api';
 import { Img, Item, ImgNotFound } from './CastMovie.styled';
 
 const CastMovie = () => {

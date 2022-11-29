@@ -1,10 +1,10 @@
 import { useState, useEffect, Suspense } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
-import * as API from '../../API/Api';
+import * as API from '../API/Api';
 import Additional from '../components/Addititonal/Addititonal';
 import InfoMovie from '../components/InfoMovie/InfoMovie';
-import GoBackButton from '../components/GoBackButton/GoBackButton';
+import GoBackButton from '../components/Button/Button';
 import Loading from '../components/Loading/Loading';
 
 const MovieDetails = () => {

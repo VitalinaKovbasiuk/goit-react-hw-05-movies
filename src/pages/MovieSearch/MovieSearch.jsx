@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import * as API from '../../../API/Api';
-import MoviesList from 'components/MovieDetails/MovieSearch/MovieSearch';
+import * as API from '../../API/Api';
+import MoviesList from 'pages/MovieSearch/MovieSearch';
 import Loading from 'components/Loading/Loading';
 import { Form, Input, Button } from './MovieSearch.styled';
 
