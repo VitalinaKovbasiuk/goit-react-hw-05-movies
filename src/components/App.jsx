@@ -24,6 +24,7 @@ export const App = () => {
           </Route>
 
           <Route path="*" element={<PageNotFoud />} />
+
         </Route>
       </Routes>
     </>
