@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import * as API from '../../API/Api';
-import MoviesList from 'pages/MovieSearch/MovieSearch';
-import Loading from 'components/Loading/Loading';
-import { Form, Input, Button } from './MovieSearch.styled';
+import MoviesList from '../../components/MoviesList/MoviesList';
+import Loading from '../../components/Loading/Loading';
+
 
 const MovieSearch = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -45,8 +45,8 @@ const MovieSearch = () => {
 
   return (
     <>
-      <Form onSubmit={handleSubmit}>
-        <Input
+      <form onSubmit={handleSubmit}>
+        <input
           type="text"
           name="query"
           value={inputSearch}
@@ -54,10 +54,10 @@ const MovieSearch = () => {
           placeholder="Enter movie name"
         />
 
-        <Button type="submit">
+        <button type="submit">
           Search
-        </Button>
-      </Form>
+        </button>
+      </form>
 
       {showLoading && <Loading />}
       {movies && <MoviesList movies={movies} />}
